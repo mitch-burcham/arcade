@@ -1,0 +1,9 @@
+# Railway service config for arcade. Builds from source via Dockerfile.railway
+# (the repo's root Dockerfile is runtime-only and won't build on Railway).
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile.railway"
+
+[deploy]
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
